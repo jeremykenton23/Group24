@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|c:\\users\\jerem\\source\\repos\\nanogramgit\\nanogramgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|solutionrelative:nanogramgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|c:\\users\\jerem\\source\\repos\\nanogramgit\\nanogramgit\\nanogramgit.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|solutionrelative:nanogramgit\\nanogramgit.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|c:\\users\\jerem\\source\\repos\\nanogramgit\\nanogramgit\\nanogramgit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|solutionrelative:nanogramgit\\nanogramgit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|c:\\users\\jerem\\source\\repos\\nanogramgit\\nanogramgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|solutionrelative:nanogramgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,24 +22,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NanogramGit",
+              "DocumentIndex": 2,
+              "Title": "NanogramGit.csproj",
               "DocumentMoniker": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\NanogramGit.csproj",
               "RelativeDocumentMoniker": "NanogramGit\\NanogramGit.csproj",
               "ToolTip": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\NanogramGit.csproj",
               "RelativeToolTip": "NanogramGit\\NanogramGit.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-10T11:20:46.534Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T11:20:46.534Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "NanogramGit",
               "DocumentMoniker": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\NanogramGit.csproj",
               "RelativeDocumentMoniker": "NanogramGit\\NanogramGit.csproj",
@@ -51,13 +50,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\Program.cs",
               "RelativeDocumentMoniker": "NanogramGit\\Program.cs",
               "ToolTip": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\Program.cs",
               "RelativeToolTip": "NanogramGit\\Program.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAAowGgAAAARAAAA",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAAAIIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T10:03:12.564Z",
               "EditorCaption": ""

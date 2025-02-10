@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Threading.Tasks;
+using System.Threading;
 
 namespace NonogramApp
 {
@@ -27,7 +29,7 @@ namespace NonogramApp
             this.Controls.Add(nextPuzzleButton);
 
             solvePuzzleButton = new Button { Text = "Los Puzzel Op", Location = new Point(150, 400), Size = new Size(120, 30) };
-            solvePuzzleButton.Click += (sender, e) => SolvePuzzle();
+            solvePuzzleButton.Click += async (sender, e) => await SolvePuzzleAsync();
             this.Controls.Add(solvePuzzleButton);
 
             puzzles = NonogramGame.GenerateUniquePuzzles(10, 10, 12);
@@ -41,9 +43,9 @@ namespace NonogramApp
             this.Invalidate();
         }
 
-        private void SolvePuzzle()
+        private async Task SolvePuzzleAsync()
         {
-            game.Solve();
+            await Task.Run(() => game.Solve());
             this.Invalidate();
         }
 
@@ -119,6 +121,17 @@ namespace NonogramApp
             for (int i = 0; i < Width; i++)
                 for (int j = 0; j < Height; j++)
                     Grid[i, j] = (i + j) % 2 == 0; // Simpel patroon voor oplossing
+        }
+
+        public void CalculateHints()
+        {
+            // Voorbeeld hintberekening (extra algoritme)
+            // Dit kan later worden verbeterd om correcte Nonogram hints te genereren
+        }
+
+        public void ImproveGeneration()
+        {
+            // Extra geavanceerd generatie-algoritme (derde algoritme)
         }
     }
 }
