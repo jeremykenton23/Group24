@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|c:\\users\\jerem\\source\\repos\\nanogramgit\\nanogramgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08AA711F-9B91-4104-898D-CBA0C241BD48}|NanogramGit\\NanogramGit.csproj|solutionrelative:nanogramgit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\Program.cs",
+              "RelativeDocumentMoniker": "NanogramGit\\Program.cs",
+              "ToolTip": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\Program.cs*",
+              "RelativeToolTip": "NanogramGit\\Program.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T10:03:12.564Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
