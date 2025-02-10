@@ -1,0 +1,17 @@
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.AssemblyInfoInputs.cache
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.AssemblyInfo.cs
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.csproj.CoreCompileInputs.cache
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.sourcelink.json
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\bin\Debug\net8.0\NanogramGit.exe
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\bin\Debug\net8.0\NanogramGit.deps.json
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\bin\Debug\net8.0\NanogramGit.runtimeconfig.json
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\bin\Debug\net8.0\NanogramGit.dll
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\bin\Debug\net8.0\NanogramGit.pdb
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.dll
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\refint\NanogramGit.dll
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.pdb
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.genruntimeconfig.cache
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\ref\NanogramGit.dll
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.csproj.AssemblyReference.cache
+C:\Users\Jerem\source\repos\NanogramGit\NanogramGit\obj\Debug\net8.0\NanogramGit.csproj.ResolveComReference.cache
