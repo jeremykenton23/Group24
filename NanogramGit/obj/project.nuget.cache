@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "I65gjTTUuEDKmIKvZcIWwtQI97XpjadWEX8GMH7eYrWWWb8+j6oikpe+LMZ/FhLwd6Wx8apgzvA9+vYcEr2UHg==",
+  "dgSpecHash": "Iu2S3O7nTn6xzqRUqCW/g2kcdTs5RSKkoUxYX0d8AGChyoaQbUdwfTyhZwmF0gK3pkkAHGK8FgSC9MTA7VGK4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jerem\\source\\repos\\NanogramGit\\NanogramGit\\NanogramGit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jerem\\.nuget\\packages\\microsoft.win32.systemevents\\9.0.1\\microsoft.win32.systemevents.9.0.1.nupkg.sha512",
+    "C:\\Users\\Jerem\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Jerem\\.nuget\\packages\\system.drawing.common\\9.0.1\\system.drawing.common.9.0.1.nupkg.sha512",
     "C:\\Users\\Jerem\\.nuget\\packages\\system.reactive\\6.0.1\\system.reactive.6.0.1.nupkg.sha512",
     "C:\\Users\\Jerem\\.nuget\\packages\\system.reactive.windows.forms\\6.0.1\\system.reactive.windows.forms.6.0.1.nupkg.sha512",

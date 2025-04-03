@@ -1,0 +1,24 @@
+[
+  {
+    "Username": "",
+    "HashedPassword": "47DEQpj8HBSa\u002B/TImW\u002B5JCeuQeRkm5NMpJWZG3hSuFU=",
+    "FirstName": "",
+    "LastName": "",
+    "Email": "",
+    "Settings": {
+      "Theme": "light",
+      "GridSize": 10
+    }
+  },
+  {
+    "Username": "Ben",
+    "HashedPassword": "pmWkWSBCL51Bfkhn79xPuKBKHz//H6B\u002BmY6G9/eieuM=",
+    "FirstName": "Ben",
+    "LastName": "Kader",
+    "Email": "benkader@gmail.com",
+    "Settings": {
+      "Theme": "light",
+      "GridSize": 10
+    }
+  }
+]
