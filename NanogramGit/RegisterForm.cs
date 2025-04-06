@@ -56,13 +56,13 @@ namespace NonogramApp
             lblStatus.Left = 50;
             lblStatus.Width = 250;
 
-            this.Controls.Add(txtUsername);
-            this.Controls.Add(txtPassword);
-            this.Controls.Add(txtFirstName);
-            this.Controls.Add(txtLastName);
-            this.Controls.Add(txtEmail);
-            this.Controls.Add(btnRegister);
-            this.Controls.Add(lblStatus);
+            Controls.Add(txtUsername);
+            Controls.Add(txtPassword);
+            Controls.Add(txtFirstName);
+            Controls.Add(txtLastName);
+            Controls.Add(txtEmail);
+            Controls.Add(btnRegister);
+            Controls.Add(lblStatus);
         }
 
         private void Register(object? sender, EventArgs e)
@@ -77,21 +77,16 @@ namespace NonogramApp
                 return;
             }
 
-            var salt = UserManager.GenerateSalt();
-            var hashedPassword = UserManager.HashPasswordWithSalt(txtPassword.Text, salt);
-
             var newUser = new User
             {
-                Username = txtUsername.Text,
-                Salt = salt,
-                HashedPassword = hashedPassword,
-                FirstName = txtFirstName.Text,
-                LastName = txtLastName.Text,
-                Email = txtEmail.Text,
+                Username = txtUsername.Text.Trim(),
+                FirstName = txtFirstName.Text.Trim(),
+                LastName = txtLastName.Text.Trim(),
+                Email = txtEmail.Text.Trim(),
                 Settings = new UserSettings()
             };
 
-            bool success = userManager.Register(newUser);
+            bool success = userManager.Register(newUser, txtPassword.Text);
             lblStatus.Text = success ? "Registration successful!" : "Username already exists.";
         }
     }

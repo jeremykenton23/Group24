@@ -48,11 +48,11 @@ namespace NonogramApp
             lblMessage.Left = 50;
             lblMessage.Width = 200;
 
-            this.Controls.Add(txtUser);
-            this.Controls.Add(txtPass);
-            this.Controls.Add(btnLogin);
-            this.Controls.Add(btnGoRegister);
-            this.Controls.Add(lblMessage);
+            Controls.Add(txtUser);
+            Controls.Add(txtPass);
+            Controls.Add(btnLogin);
+            Controls.Add(btnGoRegister);
+            Controls.Add(lblMessage);
         }
 
         private void Login(object? sender, EventArgs e)
@@ -60,21 +60,18 @@ namespace NonogramApp
             var username = txtUser.Text.Trim();
             var password = txtPass.Text;
 
-            var user = userManager.Users.Find(u => u.Username == username);
+            var user = userManager.Login(username, password);
 
             if (user != null)
             {
-                string hashedInput = UserManager.HashPasswordWithSalt(password, user.Salt);
-                if (user.HashedPassword == hashedInput)
-                {
-                    Hide();
-                    new MainForm(user).ShowDialog();
-                    Close();
-                    return;
-                }
+                Hide();
+                new MainForm(user).ShowDialog();
+                Close();
             }
-
-            lblMessage.Text = "Login failed.";
+            else
+            {
+                lblMessage.Text = "Login failed.";
+            }
         }
     }
 }

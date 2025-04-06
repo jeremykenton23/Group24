@@ -1,0 +1,7 @@
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\bin\Debug\net8.0-windows\CoverletSourceRootsMapping_NanogramGit.Tests
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\obj\Debug\net8.0-windows\NanogramGit.Tests.csproj.AssemblyReference.cache
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\obj\Debug\net8.0-windows\NanogramGit.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\obj\Debug\net8.0-windows\NanogramGit.Tests.AssemblyInfoInputs.cache
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\obj\Debug\net8.0-windows\NanogramGit.Tests.AssemblyInfo.cs
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\obj\Debug\net8.0-windows\NanogramGit.Tests.csproj.CoreCompileInputs.cache
+C:\Users\soekh\assignmentsJS\Group24\NanogramApp.Tests\obj\Debug\net8.0-windows\NanogramGit.Tests.sourcelink.json

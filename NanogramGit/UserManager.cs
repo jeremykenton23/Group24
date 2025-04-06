@@ -27,35 +27,13 @@ namespace NonogramApp
             return user.HashedPassword == hashed ? user : null;
         }
 
-        // ✅ Eenvoudige registratie (gebruikt nog steeds veilige hashing)
-        public bool Register(string username, string password)
+        public bool Register(User newUser, string plainPassword)
         {
-            if (Users.Any(u => u.Username == username))
-                return false;
-
-            var salt = GenerateSalt();
-            var hashedPassword = HashPasswordWithSalt(password, salt);
-
-            Users.Add(new User
-            {
-                Username = username,
-                Salt = salt,
-                HashedPassword = hashedPassword,
-                Settings = new UserSettings()
-            });
-
-            SaveUsers();
-            return true;
-        }
-
-        // ✅ Volledige registratie met alle gebruikersinfo
-        public bool Register(User newUser)
-        {
-            if (Users.Any(u => u.Username == newUser.Username))
+            if (Users.Any(u => u.Username.Equals(newUser.Username, StringComparison.OrdinalIgnoreCase)))
                 return false;
 
             newUser.Salt = GenerateSalt();
-            newUser.HashedPassword = HashPasswordWithSalt(newUser.HashedPassword, newUser.Salt);
+            newUser.HashedPassword = HashPasswordWithSalt(plainPassword, newUser.Salt);
 
             Users.Add(newUser);
             SaveUsers();
@@ -72,7 +50,7 @@ namespace NonogramApp
             }
         }
 
-        public void UpdateUser(User updatedUser)
+        public void UpdateUser(User updatedUser, string? newPlainPassword = null)
         {
             var found = Users.FirstOrDefault(u => u.Username == updatedUser.Username);
             if (found != null)
@@ -81,10 +59,10 @@ namespace NonogramApp
                 found.LastName = updatedUser.LastName;
                 found.Email = updatedUser.Email;
 
-                if (!string.IsNullOrWhiteSpace(updatedUser.HashedPassword))
+                if (!string.IsNullOrWhiteSpace(newPlainPassword))
                 {
                     found.Salt = GenerateSalt();
-                    found.HashedPassword = HashPasswordWithSalt(updatedUser.HashedPassword, found.Salt);
+                    found.HashedPassword = HashPasswordWithSalt(newPlainPassword, found.Salt);
                 }
 
                 found.Settings = updatedUser.Settings;
@@ -98,7 +76,7 @@ namespace NonogramApp
             SaveUsers();
         }
 
-        public void SaveUsers()
+        private void SaveUsers()
         {
             var json = JsonSerializer.Serialize(Users, new JsonSerializerOptions
             {
@@ -115,7 +93,6 @@ namespace NonogramApp
             return JsonSerializer.Deserialize<List<User>>(json) ?? new List<User>();
         }
 
-        // 🔐 Hash wachtwoord + salt veilig
         public static string HashPasswordWithSalt(string password, string salt)
         {
             using var sha = SHA256.Create();
@@ -124,7 +101,6 @@ namespace NonogramApp
             return Convert.ToBase64String(hash);
         }
 
-        // 🔑 Genereer unieke salt (16 bytes, base64)
         public static string GenerateSalt()
         {
             byte[] bytes = new byte[16];

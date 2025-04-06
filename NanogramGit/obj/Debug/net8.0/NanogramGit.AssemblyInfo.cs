@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NanogramGit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d658311e51f8170c8fc95997c1e7f916885f45f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17c292123b07a906456447a369366b88025669d6")]
 [assembly: System.Reflection.AssemblyProductAttribute("NanogramGit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NanogramGit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
