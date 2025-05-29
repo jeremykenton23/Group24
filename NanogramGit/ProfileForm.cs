@@ -35,6 +35,7 @@ namespace NonogramApp
 
             txtUsername = new TextBox
             {
+                Name = "txtUsername",
                 Text = currentUser.Username,
                 Location = new Point(50, 20),
                 Width = 200,
@@ -43,6 +44,7 @@ namespace NonogramApp
 
             txtFirstName = new TextBox
             {
+                Name = "txtFirstName",
                 Text = currentUser.FirstName ?? "",
                 PlaceholderText = "First Name",
                 Location = new Point(50, 50),
@@ -51,6 +53,7 @@ namespace NonogramApp
 
             txtLastName = new TextBox
             {
+                Name = "txtLastName",
                 Text = currentUser.LastName ?? "",
                 PlaceholderText = "Last Name",
                 Location = new Point(50, 80),
@@ -59,6 +62,7 @@ namespace NonogramApp
 
             txtEmail = new TextBox
             {
+                Name = "txtEmail",
                 Text = currentUser.Email ?? "",
                 PlaceholderText = "Email",
                 Location = new Point(50, 110),
@@ -67,6 +71,7 @@ namespace NonogramApp
 
             txtNewPassword = new TextBox
             {
+                Name = "txtNewPassword",
                 PlaceholderText = "New Password (optional)",
                 Location = new Point(50, 140),
                 Width = 200,
@@ -75,6 +80,7 @@ namespace NonogramApp
 
             btnSave = new Button
             {
+                Name = "btnSave",
                 Text = "Save",
                 Location = new Point(50, 190),
                 Width = 90
@@ -83,6 +89,7 @@ namespace NonogramApp
 
             btnDelete = new Button
             {
+                Name = "btnDelete",
                 Text = "Delete Account",
                 Location = new Point(150, 190),
                 Width = 100
@@ -104,7 +111,6 @@ namespace NonogramApp
             currentUser.LastName = txtLastName.Text.Trim();
             currentUser.Email = txtEmail.Text.Trim();
 
-            // Alleen bij een nieuw wachtwoord: herhashen met nieuwe salt
             if (!string.IsNullOrWhiteSpace(txtNewPassword.Text))
             {
                 var newSalt = UserManager.GenerateSalt();

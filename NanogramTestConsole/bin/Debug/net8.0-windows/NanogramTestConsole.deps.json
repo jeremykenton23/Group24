@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "NanogramTestConsole/1.0.0": {
+        "dependencies": {
+          "NanogramGit": "1.0.0"
+        },
+        "runtime": {
+          "NanogramTestConsole.dll": {}
+        }
+      },
+      "NanogramGit/1.0.0": {
+        "runtime": {
+          "NanogramGit.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NanogramTestConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NanogramGit/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

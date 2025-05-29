@@ -1,21 +1,11 @@
 [
   {
-    "Username": "",
-    "HashedPassword": "47DEQpj8HBSa\u002B/TImW\u002B5JCeuQeRkm5NMpJWZG3hSuFU=",
-    "FirstName": "",
-    "LastName": "",
-    "Email": "",
-    "Settings": {
-      "Theme": "light",
-      "GridSize": 10
-    }
-  },
-  {
-    "Username": "Ben",
-    "HashedPassword": "pmWkWSBCL51Bfkhn79xPuKBKHz//H6B\u002BmY6G9/eieuM=",
-    "FirstName": "Ben",
-    "LastName": "Kader",
-    "Email": "benkader@gmail.com",
+    "Username": "Jkenton",
+    "HashedPassword": "I6rGvGODyRSZyL0CE4le1kl\u002BhvxcXCgVr4BGmxgmHUc=",
+    "Salt": "3RA3eCY680PrgRF0NfV7mg==",
+    "FirstName": "Jeremy",
+    "LastName": "Kenton",
+    "Email": "jeremy.kenton@icloud.com",
     "Settings": {
       "Theme": "light",
       "GridSize": 10

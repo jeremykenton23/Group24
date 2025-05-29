@@ -5,20 +5,31 @@ namespace NonogramApp
 {
     public class RegisterForm : Form
     {
-        private TextBox txtUsername = new TextBox();
-        private TextBox txtPassword = new TextBox();
-        private TextBox txtFirstName = new TextBox();
-        private TextBox txtLastName = new TextBox();
-        private TextBox txtEmail = new TextBox();
-        private Button btnRegister = new Button();
-        private Label lblStatus = new Label();
-        private UserManager userManager = new UserManager();
+        private TextBox txtUsername = new();
+        private TextBox txtPassword = new();
+        private TextBox txtFirstName = new();
+        private TextBox txtLastName = new();
+        private TextBox txtEmail = new();
+        private Button btnRegister = new();
+        private Label lblStatus = new();
+        private UserManager userManager;
 
-        public RegisterForm()
+        public RegisterForm(UserManager userManager)
         {
+            this.userManager = userManager;
+
             this.Text = "Register";
             this.Size = new System.Drawing.Size(350, 330);
             this.StartPosition = FormStartPosition.CenterScreen;
+
+            // ✅ Voeg unieke namen toe aan alle controls
+            txtUsername.Name = "txtUsername";
+            txtPassword.Name = "txtPassword";
+            txtFirstName.Name = "txtFirstName";
+            txtLastName.Name = "txtLastName";
+            txtEmail.Name = "txtEmail";
+            btnRegister.Name = "btnRegister";
+            lblStatus.Name = "lblStatus";
 
             txtUsername.PlaceholderText = "Username";
             txtUsername.Top = 20;
@@ -56,42 +67,40 @@ namespace NonogramApp
             lblStatus.Left = 50;
             lblStatus.Width = 250;
 
-            this.Controls.Add(txtUsername);
-            this.Controls.Add(txtPassword);
-            this.Controls.Add(txtFirstName);
-            this.Controls.Add(txtLastName);
-            this.Controls.Add(txtEmail);
-            this.Controls.Add(btnRegister);
-            this.Controls.Add(lblStatus);
+            this.Controls.AddRange(new Control[]
+            {
+                txtUsername, txtPassword, txtFirstName, txtLastName, txtEmail, btnRegister, lblStatus
+            });
         }
 
         private void Register(object? sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text) ||
-                string.IsNullOrWhiteSpace(txtPassword.Text) ||
-                string.IsNullOrWhiteSpace(txtFirstName.Text) ||
-                string.IsNullOrWhiteSpace(txtLastName.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text))
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text;
+            string firstName = txtFirstName.Text.Trim();
+            string lastName = txtLastName.Text.Trim();
+            string email = txtEmail.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(firstName) ||
+                string.IsNullOrWhiteSpace(lastName) ||
+                string.IsNullOrWhiteSpace(email))
             {
                 lblStatus.Text = "Please fill in all fields.";
                 return;
             }
 
-            var salt = UserManager.GenerateSalt();
-            var hashedPassword = UserManager.HashPasswordWithSalt(txtPassword.Text, salt);
-
             var newUser = new User
             {
-                Username = txtUsername.Text,
-                Salt = salt,
-                HashedPassword = hashedPassword,
-                FirstName = txtFirstName.Text,
-                LastName = txtLastName.Text,
-                Email = txtEmail.Text,
+                Username = username,
+                FirstName = firstName,
+                LastName = lastName,
+                Email = email,
                 Settings = new UserSettings()
             };
 
-            bool success = userManager.Register(newUser);
+            bool success = userManager.Register(newUser, password);
             lblStatus.Text = success ? "Registration successful!" : "Username already exists.";
         }
     }

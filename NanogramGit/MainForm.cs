@@ -25,9 +25,10 @@ namespace NonogramApp
         private User currentUser;
         private UserManager userManager = new UserManager();
 
-        public MainForm(User user)
+        public MainForm(User user, UserManager manager)
         {
             currentUser = user;
+            userManager = manager;
             this.Text = "Nonogram App";
             this.ClientSize = new Size(750, 600);
             this.DoubleBuffered = true;
@@ -150,7 +151,7 @@ namespace NonogramApp
         private void Logout()
         {
             this.Hide();
-            var login = new LoginForm();
+            var login = new LoginForm(userManager);
             login.ShowDialog();
             this.Close();
         }

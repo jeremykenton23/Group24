@@ -10,7 +10,9 @@ namespace NonogramApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm()); // Start vanuit login
+
+            var userManager = new UserManager(); // ✅ gedeelde UserManager
+            Application.Run(new LoginForm(userManager));
         }
     }
 }

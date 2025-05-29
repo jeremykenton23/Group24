@@ -5,54 +5,42 @@ namespace NonogramApp
 {
     public class LoginForm : Form
     {
-        private TextBox txtUser = new TextBox();
-        private TextBox txtPass = new TextBox();
-        private Button btnLogin = new Button();
-        private Button btnGoRegister = new Button();
-        private Label lblMessage = new Label();
-        private UserManager userManager = new UserManager();
+        private TextBox txtUser;
+        private TextBox txtPass;
+        private Button btnLogin;
+        private Button btnGoRegister;
+        private Label lblMessage;
+        private readonly UserManager userManager;
 
-        public LoginForm()
+        public LoginForm(UserManager userManager)
         {
+            this.userManager = userManager;
+
             this.Text = "Login";
             this.Size = new System.Drawing.Size(300, 200);
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            txtUser.PlaceholderText = "Username";
-            txtUser.Top = 20;
-            txtUser.Left = 50;
-            txtUser.Width = 200;
+            // ✅ Initieer en naam alle controls voor tests
+            txtUser = new TextBox { Name = "txtUser", PlaceholderText = "Username", Location = new System.Drawing.Point(50, 20), Width = 200 };
+            txtPass = new TextBox { Name = "txtPass", PlaceholderText = "Password", PasswordChar = '*', Location = new System.Drawing.Point(50, 50), Width = 200 };
+            btnLogin = new Button { Name = "btnLogin", Text = "Login", Location = new System.Drawing.Point(50, 90), Width = 70 };
+            btnGoRegister = new Button { Name = "btnGoRegister", Text = "Register", Location = new System.Drawing.Point(130, 90), Width = 100 };
+            lblMessage = new Label { Name = "lblMessage", Text = "", Location = new System.Drawing.Point(50, 130), Width = 200 };
 
-            txtPass.PlaceholderText = "Password";
-            txtPass.Top = 50;
-            txtPass.Left = 50;
-            txtPass.Width = 200;
-            txtPass.PasswordChar = '*';
-
-            btnLogin.Text = "Login";
-            btnLogin.Top = 90;
-            btnLogin.Left = 50;
+            // ✅ Events koppelen
             btnLogin.Click += Login;
-
-            btnGoRegister.Text = "Register";
-            btnGoRegister.Top = 90;
-            btnGoRegister.Left = 130;
             btnGoRegister.Click += (s, e) =>
             {
                 Hide();
-                new RegisterForm().ShowDialog();
+                new RegisterForm(userManager).ShowDialog();
                 Show();
             };
 
-            lblMessage.Top = 130;
-            lblMessage.Left = 50;
-            lblMessage.Width = 200;
-
-            this.Controls.Add(txtUser);
-            this.Controls.Add(txtPass);
-            this.Controls.Add(btnLogin);
-            this.Controls.Add(btnGoRegister);
-            this.Controls.Add(lblMessage);
+            // ✅ Voeg alle controls toe
+            this.Controls.AddRange(new Control[]
+            {
+                txtUser, txtPass, btnLogin, btnGoRegister, lblMessage
+            });
         }
 
         private void Login(object? sender, EventArgs e)
@@ -60,21 +48,17 @@ namespace NonogramApp
             var username = txtUser.Text.Trim();
             var password = txtPass.Text;
 
-            var user = userManager.Users.Find(u => u.Username == username);
-
+            var user = userManager.Login(username, password);
             if (user != null)
             {
-                string hashedInput = UserManager.HashPasswordWithSalt(password, user.Salt);
-                if (user.HashedPassword == hashedInput)
-                {
-                    Hide();
-                    new MainForm(user).ShowDialog();
-                    Close();
-                    return;
-                }
+                Hide();
+                new MainForm(user, userManager).ShowDialog();
+                Close();
             }
-
-            lblMessage.Text = "Login failed.";
+            else
+            {
+                lblMessage.Text = "Login failed. Check credentials.";
+            }
         }
     }
 }
